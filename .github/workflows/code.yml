@@ -40,7 +40,9 @@ jobs:
         uses: hashicorp/setup-terraform@v3
         with:
           terraform_version: "1.6.6" 
-        run: ls -la
+
+      - name: "Terraform version"
+        run: terraform version
 
       - name: "Version script"
          run: |
