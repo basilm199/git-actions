@@ -35,6 +35,13 @@ jobs:
         run: |
           pwd
           ls -la
+
+      - name: "Terraform"
+        run: |
+          wget https://releases.hashicorp.com/terraform/1.6.6/terraform_1.6.6_linux_amd64.zip
+          unzip terraform_1.6.6_linux_amd64.zip
+          ./terraform version
+          ls -la
  
       - name: "Version script"
         run: |
